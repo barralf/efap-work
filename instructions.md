@@ -20,7 +20,7 @@ Bon courage !
 Nous allons nous assurer d'avoir le parfait environnement de travail pour coder proprement notre page Web.
 ### Outil nº1 : Editeur de Texte
 1. Installez l'éditeur de texte : [Atom](https://atom.io/) (éditeur de texte pour développeurs).
-2. Ouvrez l'éditeur et allez personnaliser deux petits paramètres de l'application : Menu "Atom" > "Parameters" (ou Settings sur PC) > "Editor" > Cochez les options "Show Indent Guide" & "Show Invisibles". (ceci va nous aider à indenter proprement : cf. suite). Fermez ensuite tous les onglets présents de façon à avoir :
+2. Ouvrez l'éditeur et allez personnaliser deux petits paramètres de l'application : Menu "Atom" > "Preferences" (ou Settings sur PC) > "Editor" > Cochez les options "Show Indent Guide" & "Show Invisibles". (ceci va nous aider à indenter proprement : cf. suite). Fermez ensuite tous les onglets présents de façon à avoir :
 ![Image of Atom](images-instructions/atom-empty.png)
 
 3. Récupérez le dossier ["landing"](https://github.com/barralf/landing-efap-instructions/blob/master/landing.zip) avec les images (téléchargez-le en cliquant sur le bouton `Download`). Glissez/déposez le dossier dans l'éditeur de texte. (#DragAndDrop)
@@ -235,7 +235,7 @@ Pour baliser un bloc, on utilise les balises `<div class="">` (ouvrante) et `</d
 
 On remarque l'attribut facultatif `class="nom_de_classe_du_bloc"` de la balise ouvrante qui va servir de sélecteur dans le `.css` auquel on va attribuer des règles de styles qui s'appliqueront à toutes les div de classe `"nom_de_classe_du_bloc"` (et à ce qu'il y a à l'interieur aussi).
 
-On va baliser notre page de la façon suivante avec 6 div associées à 3 classes différentes :
+On va baliser notre page avec 6 `div` associées à 3 `classes` différentes. Ci-dessous l'illustration schématique qui représente les `div` qui, attention, sont  par défaut invisibles et sans bordures (par défaut, le navigateur n'interprète aucun style associé aux `div` contrairement aux balises `h1, p, a` tant qu'on a pas ajouté de style particulier dans la feuille de style).
 ![Landing div](images-instructions/landing-div.png)
 
 
@@ -276,6 +276,14 @@ On va baliser notre page de la façon suivante avec 6 div associées à 3 classe
   </body>
 </html>
 
+```
+
+NB : pour bien visualiser les div, vous pouvez rajouter temporairement des bordures rouges aux div si vous rajoutez dans la feuille de style `style.css`, le code suivant (à bien supprimer pour la suite):
+```css
+.asset {
+  border: 2px solid;
+  border-color: red;
+}
 ```
 
 ## 3.4. Utilisons une librairie sympathique d'icônes : Fontawesome !
