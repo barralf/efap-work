@@ -2,10 +2,19 @@
 
 ## Avant-propos
 L'objectif de cette introduction au HTML/CSS est de :
-  - Comprendre le HTML & CSS en mettant les mains dans le cambouis pour coder un site Web composé de deux pages Web statiques (en faisant des copier-coller principalement #tranquillou 😎😎!)
+  - Comprendre le HTML & CSS en mettant les mains dans le cambouis : vous allez coder un site Web composé de deux pages Web statiques (en faisant des copier-coller principalement #tranquillou 😎😎!)
   - Savoir ce qui se passe derrière un CMS (Wordpress, Jumla, etc) et éventuellement pouvoir personnaliser certains éléments HTML/CSS si c'est possible sur le CMS utilisé
 
-Pour atteindre cet objectif, grâce aux quelques notions vues en classe (prérequis indispensables : balises/attributs HTML et exemples, squelette HTML, selecteurs/propriétés CSS et exemples), nous allons coder un site Web statique d'une start-up livrant à domicile des muffins. Le site Web sera composé de deux pages Web statiques et sera codé et visualisé en "local" sur votre ordinateur : nous ne nous intéresserons pas à le mettre en ligne sur le Web. (c'est-à-dire héberger le site Web sur un serveur Web d'Internet)
+Pour atteindre cet objectif, grâce aux quelques notions vues en classe (prérequis indispensables : balises/attributs HTML et exemples, squelette HTML, selecteurs/propriétés CSS et exemples), nous allons coder un site Web statique d'une start-up livrant à domicile des muffins. Le site Web sera composé de deux pages Web statiques et sera codé et visualisé en "local" sur votre ordinateur : nous ne nous intéresserons pas à le mettre en ligne sur le Web. (c'est-à-dire à réaliser l'hébergement du site Web sur un serveur Web d'Internet).
+
+## Consignes à respecter
+- Réalisez le tutoriel et faites le maximum de choses possibles (vous pouvez tout reussir très facilement jusqu'au 3.8 😉)
+- Renommez le dossier "landing" de la sorte "landing_EFAP_301_DUPONT_Martin"
+- Compressez le dossier en zip (clic droit sur le dossier > Compresser).
+![Compress image](images-instructions/compress.png)
+- Envoyez-moi par mail le dossier compressé avec l'objet "Landing EFAP 301 DUPONT Martin"
+
+Bon courage !
 
 # 1. Organisons notre plan de travail !
 Nous allons nous assurer d'avoir le parfait environnement de travail pour coder proprement notre page Web.
@@ -14,7 +23,7 @@ Nous allons nous assurer d'avoir le parfait environnement de travail pour coder 
 2. Ouvrez l'éditeur et allez personnaliser deux petits paramètres de l'application : Menu "Atom" > "Parameters" (ou Settings sur PC) > "Editor" > Cochez les options "Show Indent Guide" & "Show Invisibles". (ceci va nous aider à indenter proprement : cf. suite). Fermez ensuite tous les onglets présents de façon à avoir :
 ![Image of Atom](images-instructions/atom-empty.png)
 
-3. Récupérez le dossier ["landing"](https://github.com/barralf/landing-efap-instructions/blob/master/landing.zip) avec les images (téléchargez-le en cliquant sur `Download`). Glissez/déposez le dossier dans l'éditeur de texte. (#DragAndDrop)
+3. Récupérez le dossier ["landing"](https://github.com/barralf/landing-efap-instructions/blob/master/landing.zip) avec les images (téléchargez-le en cliquant sur le bouton `Download`). Glissez/déposez le dossier dans l'éditeur de texte. (#DragAndDrop)
 4. Sur l'arbre de navigation de gauche, dans le dossier "landing":
   - clic droit : New file. Le sauvegarder sous le nom `index.html`.
   - faire la même chose pour `style.css`.
@@ -22,7 +31,7 @@ Nous allons nous assurer d'avoir le parfait environnement de travail pour coder 
 ### Outil nº2 : Navigateur Web
 5. Sur le Finder, double cliquez sur le fichier `index.html` : le fichier s'ouvre automatiquement avec votre navigateur Web par défaut. Vous devriez visualiser une page blanche, ce qui est rassurant car le fichier `index.html` est vide !
 ![Image of Finder](images-instructions/finder-clic-nav-Web.png)
-NB : Vous pouvez vous amuser à utiliser l'inspecteur navigateur (clic droit--> Inspecter) pour récupérer le code HTML/CSS du site et faire quelques changements insolites en local !
+NB : Vous pouvez vous amuser à utiliser l'inspecteur navigateur (clic droit--> Inspecter) pour accéder au code HTML/CSS de la page consultée et faire quelques changements insolites en local ! (puisque vous travaillez en local et pas sur le serveur hébergeant le site, il n'y a que vous, en tant que client, qui pourrez visualiser vos changements : sinon tout le monde pourrez modifier le site de Facebook ! )
 ![Daskit inspector](images-instructions/daskit-inspector.png)
 
 6. Pour faciliter les choses pour la suite : partagez votre plan de travail en deux : éditeur de texte à gauche et navigateur Web à droite. Cf :
@@ -214,7 +223,7 @@ h4 {
   color: black
 }
 ```
-NB : vous pouvez rajouter à votre guise des règles de style CSS en parcourant notamment cette [liste des propriétés CSS]( http://cssreference.io/) (d'autres liens sont en fin de document)
+NB : vous pouvez rajouter à votre guise des règles de style CSS en parcourant notamment cette [liste des propriétés CSS]( http://cssreference.io/) (d'autres liens sont également en fin de document)
 
 ## 3.3. Structurons notre page avec des div !
 
@@ -224,7 +233,7 @@ En fait, les éléments balisés d'une page Web sont rassemblés dans des blocs 
 
 Pour baliser un bloc, on utilise les balises `<div class="">` (ouvrante) et `</div>` (fermante).
 
-On remarque l'attribut facultatif `class="nom_de_classe_du_bloc"` de la balise ouvrante qui va servir de sélecteur dans le `.css` auquel on va attribuer des règles de styles qui s'appliqueront à toutes les div de classe `"nom_de_classe_du_bloc"`.
+On remarque l'attribut facultatif `class="nom_de_classe_du_bloc"` de la balise ouvrante qui va servir de sélecteur dans le `.css` auquel on va attribuer des règles de styles qui s'appliqueront à toutes les div de classe `"nom_de_classe_du_bloc"` (et à ce qu'il y a à l'interieur aussi).
 
 On va baliser notre page de la façon suivante avec 6 div associées à 3 classes différentes :
 ![Landing div](images-instructions/landing-div.png)
@@ -299,18 +308,18 @@ Aussi, on va remplacer le nom de chaque réseau social par l'icône associée av
     </li>
     <li>
       <a href="https://instagram.com/iceme">
-        <i class="fa fa-instagram"></i>
+        <i class="fa fa-youtube"></i>
       </a>
     </li>
     <li>
       <a href="https://youtube.com/iceme">
-        <i class="fa fa-youtube"></i>
+        <i class="fa fa-instagram"></i>
       </a>
     </li>
   </ul>
 </div>
 ```
-Vérifiez que vos liens redirigent bien vers les bons réseaux sociaux et qu'ils s'ouvrent bien dans la même page ou dans un nouvel onglet selon l'ajout de l'attribut `target=_blank`.
+Vérifiez que vos liens redirigent bien vers les bons réseaux sociaux et qu'ils s'ouvrent bien dans la même page ou dans un nouvel onglet selon l'ajout de l'attribut `target=_blank`. Corrigez s'il le faut. 😉
 
 ## 3.5. Profitons du framework CSS : Bootstrap
 On va prétélécharger dans le head un framework CSS [Bootstrap](http://getbootstrap.com/css/) clé en main qui a été developpée par Twitter et dont on va utiliser les classes de CSS préfabriquées sans les écrire dans notre feuille de style `style.css` . On va gagner un petit peu de temps !
@@ -322,7 +331,7 @@ On va donc utiliser la class `list-inline` de Bootstrap pour rendre la liste hor
 <div class="footer">
   <ul class="list-inline social">
 ```
-Aussi copiez-collez dans style.css les sélecteurs correspondant aux classes (attention au point précisant qu'on selectionne une classe et pas une balise traditionnelle) avec leurs règles de style associées :
+Aussi copiez-collez dans style.css les sélecteurs correspondant aux classes (attention au point `.` précisant qu'on selectionne une classe et pas une balise traditionnelle) avec leurs règles de style associées :
 
 ```css
 .footer {
@@ -345,7 +354,7 @@ Aussi copiez-collez dans style.css les sélecteurs correspondant aux classes (at
 }
 ```
 
-Aussi, on va utiliser le bouton Bootstrap pour avoir le CallToAction "Commandez". Pour cela on transforme notre titre HTML `h3` en bouton HTML `button` et en utilisant une classe de style spécifique de notre framework CSS :
+Aussi, on va utiliser un bouton de Bootstrap pour avoir le CallToAction "Commandez". Pour cela on transforme notre titre HTML `h3` en bouton HTML `button` et en utilisant une classe de style spécifique de notre framework CSS :
 
 ```html
 <!-- Code à copier-coller au bon endroit -->
@@ -354,7 +363,7 @@ Aussi, on va utiliser le bouton Bootstrap pour avoir le CallToAction "Commandez"
 
 ## 3.6. Fignolons le CSS
 
-Ajoutez les règles de style ci-dessous. Vous pouvez toutes les comprendre et les deviner !
+Ajoutez les règles de style ci-dessous. Vous pouvez toutes les comprendre et les deviner (sinon consultez [ce site]( http://cssreference.io/)) ! (aussi assurez-vous de lier la bonne image de fond)
 ```css
 /*règles de style concernant le haut de page*/
 .wrapper {
@@ -398,7 +407,7 @@ Ajoutez les règles de style ci-dessous. Vous pouvez toutes les comprendre et le
 ![Resultat final](images-instructions/resultat-final.png)
 
 
-## 3.7. BONUS nº1 : Créez une page de contact hyperliée à la page d'accueil (EASY)
+## 3.7. Challenge nº1 : Créez une page de contact hyperliée à la page d'accueil (EASY)
 
 Dupliquez la page `index.html` et la nommez `contact.html` .
 
@@ -421,7 +430,7 @@ Enfin, pour naviguer entre les deux pages Web, rajoutez dans les bas de pages en
 
 Ça y est ! Vous pouvez naviguer entre les différentes pages Web statiques de votre site Web MuffinMe ! Magical ! 😋
 
-## 3.8. BONUS nº2 : Insérons un formulaire
+## 3.8. Challenge nº2 : Insérons un formulaire
 
 Nous souhaitons récupérer les adresses mails des potentiels clients afin de les informer ou bombarder de nos différentes offres exceptionnelles.
 Rajoutons en bas de page une inscription à la newsletter de notre service comme ci-joint :
@@ -445,11 +454,11 @@ En parcourant la documentation de [Bootstrap](http://getbootstrap.com/css/#forms
 Copiez-collez ce code dans une div `<div class="text-center"> </div>` après la dernière div `class="asset"` et avant la div `class="footer"` et regardez le résultat sur votre navigateur.
 Essayez d'adapter le code pour avoir le résultat escompté : supprimer/modifier/ajouter.
 
-- Indice nº1 : vous devez surtout supprimer des lignes : il doit vous rester 2 lignes dans la balise `form`
+- Indice nº1 : vous devez surtout supprimer des lignes : il doit vous rester 2 lignes dans la balise `<form-inline>`
 - Indice nº2 : pour le design, utilisez la même classe de style pour le bouton "Inscrivez-vous" que pour le bouton "Commandez" déjà inséré plus haut (à savoir `btn-primary` au lieu de `btn-default`)
 
 
-## 3.9. BONUS nº3 (DIFFICILE) : Rendons la page Responsive
+## 3.9. Challenge nº3 (DIFFICILE) : Rendons la page Responsive
 Cette partie est vraiment challengeante !
 
 Pour cela, nous allons vouloir créer une "grille responsive" avec Bootstrap qui va dépendre de la largeur de la page et paramétrer ses caractéristiques en fonction de la largeur de la fenêtre du navigateur Web (`xs` : Petit écran (smartphone) ; `sm` : Écran réduit (tablette) ; `md`: Écran moyen (ordinateur portable) ; `lg` : Grand écran (ordinateur fixe) ).
