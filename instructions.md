@@ -332,6 +332,19 @@ Vérifiez que vos liens redirigent bien vers les bons réseaux sociaux et qu'ils
 ## 3.5. Profitons du framework CSS : Bootstrap
 On va prétélécharger dans le head un framework CSS [Bootstrap](http://getbootstrap.com/css/) clé en main qui a été developpée par Twitter et dont on va utiliser les classes de CSS préfabriquées sans les écrire dans notre feuille de style `style.css` . On va gagner un petit peu de temps !
 
+Le `<head>` mis à jour de notre page HTML devient :
+```html
+<!-- s'assurer que votre head correspond dorénavant à celui-ci en copiant collant le code -->
+<head>
+  <meta charset="utf-8">
+  <title> MuffinMe - Savourez votre muffin, maintenant !</title>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+```
+
 On va donc utiliser la class `list-inline` de Bootstrap pour rendre la liste horizontale et enlever les puces, et ajouter une classe `social` que l'on codera après dans notre feuille de style `style.css` .
 
 ```html
