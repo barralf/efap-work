@@ -9,8 +9,8 @@ Pour atteindre cet objectif, grâce aux quelques notions vues en classe (préreq
 
 ## Consignes à respecter
 - Réalisez le tutoriel et faites le maximum de choses possibles (vous pouvez tout reussir très facilement jusqu'au 3.8 😉)
-- Renommez le dossier "landing" de la sorte "landing_EFAP_301_DUPONT_Martin"
-- Compressez le dossier en zip (clic droit sur le dossier > Compresser).
+- Renommez le dossier "landing" en "landing_EFAP_301_DUPONT_Martin"
+- Compressez le dossier entier en zip (clic droit sur le dossier > Compresser).
 ![Compress image](images-instructions/compress.png)
 - Envoyez-moi par mail le dossier compressé avec l'objet "Landing EFAP 301 DUPONT Martin"
 
@@ -130,9 +130,9 @@ Le résultat est décevant, n'est-ce pas ? Pas de panique ! C'est normal car nou
 ![Contenu brut balise](images-instructions/contenu_balise.png)
 
 ## 2.3. Ajoutons des liens !
-Ajoutez-y les liens (balise `<a>` avec l'attribut `href` pour spécifier l'URL du lien) afin d'être redirigé vers le réseau social approprié en cliquant dessus. (à noter, si vous pouvez rajouter l'attribut facultatif `target="_blank"` pour que la page s'ouvre dans un nouvel onglet : meilleure UX !)
+Ajoutez-y les liens HTML ci-dessous (balise `<a>` avec l'attribut `href` pour spécifier l'URL du lien) afin d'être redirigé vers le réseau social approprié en cliquant dessus. (à noter, si vous pouvez rajouter l'attribut facultatif `target="_blank"` pour que la page s'ouvre dans un nouvel onglet : meilleure UX !)
 ```html
-<!-- Code à copier-coller au bon endroit -->
+<!-- Code à copier-coller intelligemment AU BON ENDROIT dans le fichier index.html-->
 <a href="https://www.facebook.com/muffinme" target="_blank"> Facebook </a>
 <a href="https://www.twitter.com/muffinme"> Twitter </a>
 <a href="https://www.instagram.com/muffinme"> Instagram </a>
@@ -143,12 +143,12 @@ Ajoutez-y les images/icônes au dessus de chaque caractéristique. Pour cela, vo
 
 
 ```html
-<!-- Code à copier-coller au bon endroit -->
+<!-- Code à copier-coller intelligemment AU BON ENDROIT dans le fichier index.html-->
 <img src="images/muffin.png" alt="Muffin au chocolat" width="35">
 <img src="images/geolocalization.png" alt="Géolicalisation pour livraison à domicile" width="35">
 <img src="images/delivery.png" alt="Livraison rapide" width="35">
 <img src="images/payment.png" alt="Paiments divers possibles" width="35">
-<!-- vous pouvez changer la largeur de l'icon en mettant une valeur de width de 65 pixels -->
+<!-- vous pouvez changer la largeur de l'icone en mettant une valeur de width de 65 pixels -->
 ```
 A ce stade, on est parvenu à une page Web structurée et lisible bien qu'un peu archaïque. En fait, les premières pages Web ressemblaient à ça et en particulier celles du [premier site Web historique](http://info.cern.ch/hypertext/WWW/TheProject.html) . Vous êtes donc au niveau de la crème de la crème des chercheurs scientifiques du monde ... mais des années 90 ! 😜
 
@@ -163,7 +163,7 @@ Evidemment les pages Web d'aujourd'hui ne ressemblent pas à ça grâce au CSS q
 
 Relions le fichier CSS (`style.css` créé au début) à la page HTML (`index.html`) dans le `<head>` grâce a la balise `<link>`.
 ```html
-<!-- Code à copier-coller au bon endroit -->
+<!-- Code à copier-coller et à adapter intelligemment AU BON ENDROIT dans le fichier index.html-->
 
 <head>
   [...]
@@ -172,10 +172,12 @@ Relions le fichier CSS (`style.css` créé au début) à la page HTML (`index.ht
 ```
 
 ## 3.2. Ajoutons des couleurs et des jolies polices
-Complétons notre feuille de style maintenant qu'elle est reliée au fichier HTML.
+Complétons notre feuille de style CSS maintenant qu'elle est reliée au fichier HTML.
 
+Pour rappel, voici le formalisme : un sélecteur et ses règles de style (une règle de style c'est une proprieté associée à sa valeur)
 ```css
-/*Rappel du formalisme CSS : un sélecteur et ses règles de style (une règle de style c'est une proprieté associée à sa valeur)*/
+/* A NE PAS COPIER COLLER !!! */
+/* Ceci est un simple rappel du formalisme CSS :*/
 selector {
   property1: value1;
   property2: value2;
@@ -183,7 +185,7 @@ selector {
 ```
 
 ```css
-/*Code à copier-coller au bon endroit*/
+/*Code à copier-coller AU BON ENDROIT ;)*/
 
 body {
   color: #555;
@@ -195,9 +197,9 @@ h4 {
 }
 ```
 
-Rajoutons des polices plus sympathiques que le Times New Roman. Pour éviter la situation où le client ne va pas visualiser la bonne police de la page Web (faute de l'avoir installée sur son ordinateur si la police souhaitée est disons exotique!), on va pré-télécharger dans le `<head>` grâce au service Google Font les polices que nous allons utiliser dans notre feuille de style : comme ça tout le monde visualisera la page avec les bonnes polices quelque soit son ordinateur !
+Rajoutons des polices plus sympathiques que le Times New Roman. Pour éviter la situation où le client ne va pas visualiser la bonne police de la page Web (faute de l'avoir installée sur son ordinateur si la police souhaitée est disons exotique!), on va pré-télécharger dans le `<head>` grâce au service Google Font les polices que nous allons utiliser dans notre feuille de style : comme ça tout le monde visualisera la page avec les bonnes polices quelque soit son ordinateur ! Et ce grâce à une 2ème balise `<link>`.
 ```html
-<!-- Code à copier-coller au bon endroit -->
+<!-- Code à copier-coller et adapter intelligemment AU BON ENDROIT dans le fichier index.html ;)-->
 
 <head>
   [...]
@@ -205,9 +207,9 @@ Rajoutons des polices plus sympathiques que le Times New Roman. Pour éviter la 
   <link href='style.css' rel='stylesheet'>
 </head>
 ```
-avant de les spécifier dans la feuille de style.
+avant de les spécifier dans la feuille de style CSS.
 ```css
-/*Code à copier-coller au bon endroit*/
+/*Code à copier-coller au BON ENDROIT*/
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -235,11 +237,12 @@ Pour baliser un bloc, on utilise les balises `<div class="">` (ouvrante) et `</d
 
 On remarque l'attribut facultatif `class="nom_de_classe_du_bloc"` de la balise ouvrante qui va servir de sélecteur dans le `.css` auquel on va attribuer des règles de styles qui s'appliqueront à toutes les div de classe `"nom_de_classe_du_bloc"` (et à ce qu'il y a à l'interieur aussi).
 
-On va baliser notre page avec 6 `div` associées à 3 `classes` différentes. Ci-dessous l'illustration schématique qui représente les `div` qui, attention, sont  par défaut invisibles et sans bordures (par défaut, le navigateur n'interprète aucun style associé aux `div` contrairement aux balises `h1, p, a` tant qu'on a pas ajouté de style particulier dans la feuille de style).
+On va baliser notre page avec 6 `div` associées à 3 `classes` différentes. Ci-dessous l'illustration schématique de notre page Web finale et qui représente les `div` qui, attention, sont  par défaut invisibles et sans bordures (par défaut, le navigateur n'interprète aucun style associé aux `div` contrairement aux balises `h1, p, a` tant qu'on a pas ajouté de style particulier dans la feuille de style).
 ![Landing div](images-instructions/landing-div.png)
 
-
+Notre fichier `index.html` doit correspondre à quelquechose près à ceci :
 ```html
+<!-- Code HTML à avoir dans les grandes lignes à ce stade-->
 <!DOCTYPE html>
 <html>
   <head>
@@ -251,34 +254,36 @@ On va baliser notre page avec 6 `div` associées à 3 `classes` différentes. Ci
   <body>
 
     <div class="wrapper">
-      <!-- code HTML du haut de page -->
+      <!-- Code HTML du haut de page -->
     </div>
 
     <div class="asset">
-      <!-- code HTML de la 1ère caractéristique du service MuffinMe-->
+      <!-- Code HTML de la 1ère caractéristique du service MuffinMe-->
     </div>
 
     <div class="asset">
-      <!-- code HTML de la 2ème caractéristique du service MuffinMe-->
+      <!-- Code HTML de la 2ème caractéristique du service MuffinMe-->
     </div>
 
     <div class="asset">
-      <!-- code HTML de la 3ème caractéristique du service MuffinMe-->
+      <!-- Code HTML de la 3ème caractéristique du service MuffinMe-->
     </div>
 
     <div class="asset">
-      <!-- code HTML de la 4ème caractéristique du service MuffinMe-->
+      <!-- Code HTML de la 4ème caractéristique du service MuffinMe-->
     </div>
 
     <div class="footer">
-      <!-- code HTML du bas de page-->
+      <!-- Code HTML du bas de page-->
     </div>
   </body>
 </html>
 
 ```
 
-NB : pour bien visualiser les div, vous pouvez rajouter temporairement des bordures rouges aux div si vous rajoutez dans la feuille de style `style.css`, le code suivant (à bien supprimer pour la suite):
+❗️Attention❗️ Après avoir ajouté les div, rien ne doit avoir changé sur la page de votre navigateur Web. Et rassurez-vous, c'est normal ! En effet, nous n'avons pas encore appliqué de règles de style aux classes associées : asset, wrapper et footer !
+
+NB : Pour visualiser les blocs correspondant aux div, vous pouvez rajouter temporairement des bordures rouges aux div si vous rajoutez dans la feuille de style CSS `style.css`, le code suivant (à bien supprimer pour la suite):
 ```css
 .asset {
   border: 2px solid;
@@ -287,11 +292,11 @@ NB : pour bien visualiser les div, vous pouvez rajouter temporairement des bordu
 ```
 
 ## 3.4. Utilisons une librairie sympathique d'icônes : Fontawesome !
-On va prétélécharger dans le `<head>` une bibliothèque d'icônes [Fontawesome](http://fontawesome.io/icons/)
+On va prétélécharger dans le `<head>` une bibliothèque d'icônes [Fontawesome](http://fontawesome.io/icons/) avec une 3ème balise `<link>`
 
 Le `<head>` de notre page HTML devient donc :
 ```html
-<!-- s'assurer que votre head correspond à celui-ci en copiant collant le code -->
+<!-- S'assurer que votre head correspond à celui-ci en utilisant le code suivant -->
 <head>
   <meta charset="utf-8">
   <title> MuffinMe - Savourez votre muffin, maintenant !</title>
@@ -305,29 +310,29 @@ Aussi, on va remplacer le nom de chaque réseau social par l'icône associée av
 <div class="footer">
   <ul>
     <li>
-      <a href="https://twitter.com/iceme">
+      <a href="https://twitter.com/muffinme">
         <i class="fa fa-twitter"></i>
       </a>
     </li>
     <li>
-      <a href="https://facebook.com/iceme">
+      <a href="https://facebook.com/muffinme">
         <i class="fa fa-facebook"></i>
       </a>
     </li>
     <li>
-      <a href="https://instagram.com/iceme">
+      <a href="https://instagram.com/muffinme">
         <i class="fa fa-youtube"></i>
       </a>
     </li>
     <li>
-      <a href="https://youtube.com/iceme">
+      <a href="https://youtube.com/muffinme">
         <i class="fa fa-instagram"></i>
       </a>
     </li>
   </ul>
 </div>
 ```
-Vérifiez que vos liens redirigent bien vers les bons réseaux sociaux et qu'ils s'ouvrent bien dans la même page ou dans un nouvel onglet selon l'ajout de l'attribut `target=_blank`. Corrigez s'il le faut. 😉
+Vérifiez que vos liens redirigent bien vers les bons réseaux sociaux et qu'ils s'ouvrent bien dans la même page ou dans un nouvel onglet selon l'ajout de l'attribut `target=_blank`. Corrigez s'il le faut. 😉 A ce stade, notre liste des réseaux sociaux est malheureusement encore verticale et à puces ! Nous allons corriger cela par la suite. ;)
 
 ## 3.5. Profitons du framework CSS : Bootstrap
 On va prétélécharger dans le head un framework CSS [Bootstrap](http://getbootstrap.com/css/) clé en main qui a été developpée par Twitter et dont on va utiliser les classes de CSS préfabriquées sans les écrire dans notre feuille de style `style.css` . On va gagner un petit peu de temps !
@@ -348,7 +353,7 @@ Le `<head>` mis à jour de notre page HTML devient :
 On va donc utiliser la class `list-inline` de Bootstrap pour rendre la liste horizontale et enlever les puces, et ajouter une classe `social` que l'on codera après dans notre feuille de style `style.css` .
 
 ```html
-<!-- Code à copier-coller au bon endroit -->
+<!-- Code à copier-coller au BON ENDROIT -->
 <div class="footer">
   <ul class="list-inline social">
 ```
@@ -378,13 +383,13 @@ Aussi copiez-collez dans style.css les sélecteurs correspondant aux classes (at
 Aussi, on va utiliser un bouton de Bootstrap pour avoir le CallToAction "Commandez". Pour cela on transforme notre titre HTML `h3` en bouton HTML `button` et en utilisant une classe de style spécifique de notre framework CSS :
 
 ```html
-<!-- Code à copier-coller au bon endroit -->
+<!-- Code à copier-coller et adapter intelligemment AU BON ENDROIT dans le fichier index.html ;) -->
 <button type="button" class="btn btn-primary btn-lg">Commandez</button>
 ```
 
 ## 3.6. Fignolons le CSS
 
-Ajoutez les règles de style ci-dessous. Vous pouvez toutes les comprendre et les deviner (sinon consultez [ce site]( http://cssreference.io/)) ! (aussi assurez-vous de lier la bonne image de fond)
+Ajoutez les règles de style ci-dessous dans le fichier `style.css`. Vous pouvez toutes les comprendre et les deviner (sinon consultez [ce site]( http://cssreference.io/)) ! (aussi assurez-vous de lier la bonne image de fond)
 ```css
 /*règles de style concernant le haut de page*/
 .wrapper {
@@ -424,6 +429,7 @@ Ajoutez les règles de style ci-dessous. Vous pouvez toutes les comprendre et le
 ```
 
 Ça y est : notre page est bien sympathique maintenant !
+NB : Avant de passer à la suite, assurez-vous que votre code est ultra clean : code HTML minutieusement indenté, code CSS bien présenté et pas de mélange de code HTML et de code CSS dans un même fichier.
 
 ![Resultat final](images-instructions/resultat-final.png)
 
@@ -432,10 +438,10 @@ Ajoutez les règles de style ci-dessous. Vous pouvez toutes les comprendre et le
 
 Dupliquez la page `index.html` et la nommez `contact.html` .
 
-Supprimez les `div class="asset"` et ajoutez une `div class="contact"` dans lequel vous copiez-collez le texte ci-dessous et le mettez en forme comme vous le souhaitez avec les balises `h4, p`, etc.
+Supprimez toutes les `div class="asset"` et ajoutez à la place une `div class="contact"` dans lequel vous copiez-collez le texte ci-dessous et le mettez en forme comme vous le souhaitez avec les balises `h4, p`, etc.
 
 ```html
-<!-- Texte à copier coller dans la page contact.html -->
+<!-- Texte à copier coller au BON ENDROIT dans la page contact.html -->
 
 Contactez-nous !
 5 Rue du Chocolat 75000 Paris
@@ -475,25 +481,26 @@ En parcourant la documentation de [Bootstrap](http://getbootstrap.com/css/#forms
 Copiez-collez ce code dans une div `<div class="text-center"> </div>` après la dernière div `class="asset"` et avant la div `class="footer"` et regardez le résultat sur votre navigateur.
 Essayez d'adapter le code pour avoir le résultat escompté : supprimer/modifier/ajouter.
 
-- Indice nº1 : vous devez surtout supprimer des lignes : il doit vous rester 2 lignes dans la balise `<form-inline>`
+- Indice nº1 : vous devez surtout supprimer toutes lignes de code inutiles : il doit vous rester seulement 2 lignes de code entre les balises `<form class="form-inline">` et `</form>`
 - Indice nº2 : pour le design, utilisez la même classe de style pour le bouton "Inscrivez-vous" que pour le bouton "Commandez" déjà inséré plus haut (à savoir `btn-primary` au lieu de `btn-default`)
 
 
-## 3.9. Challenge nº3 (DIFFICILE) : Rendons la page Responsive
+## 3.9. Challenge nº3 (DIFFICILE) : Rendons la page Responsive !
 Cette partie est vraiment challengeante !
 
 Pour cela, nous allons vouloir créer une "grille responsive" avec Bootstrap qui va dépendre de la largeur de la page et paramétrer ses caractéristiques en fonction de la largeur de la fenêtre du navigateur Web (`xs` : Petit écran (smartphone) ; `sm` : Écran réduit (tablette) ; `md`: Écran moyen (ordinateur portable) ; `lg` : Grand écran (ordinateur fixe) ).
 
-Nous souhaitons rendre la page Responsive à savoir faire en sorte que les `div` se positionnent d'une certaine façon.
+Nous souhaitons rendre la page Responsive à savoir faire en sorte que les `div` se positionnent d'une certaine façon :
 
-- Quand la largeur de la fenêtre du navigateur est petite (en dessous de `sm`), les 4 `div class="assets"` se positionnent les unes au-dessus des autres.
+- Quand la largeur de la fenêtre du navigateur est petite (en dessous de `sm`), nous souhaitons que les 4 `div class="assets"` se positionnent les unes au-dessus des autres.
 - Quand la largeur de la fenêtre du navigateur est moyenne (au-dessus de `sm` mais en dessous de `md`), nous souhaitons que les 4 `div class="assets"` se positionnent deux sur deux étages.
-- Quand la largeur de la fenêtre du navigateur est grande (au-dessus de md), nous souhaitons que les 4 `div class="assets"` se positionnent toutes côte à côte.
+- Quand la largeur de la fenêtre du navigateur est grande (au-dessus de `md`), nous souhaitons que les 4 `div class="assets"` se positionnent toutes côte à côte.
 
 ![Responsive representations](images-instructions/responsive-representations.png)
 
 
-Consultez ces liens pour trouver la solution :
+Consultez les liens ci-dessous pour trouver la solution. Ils détaillent bien le principe d'une grille responsive composée de 12 colonnes et du choix à faire pour la largeur (définie en nombre de colonnes) de chaque `div` en fonction des différentes résolutions possibles (`xs, sm, md, lg`).
+
 - https://openclassrooms.com/courses/prenez-en-main-bootstrap/une-grille
 - http://getbootstrap.com/examples/grid/
 - https://www.youtube.com/watch?v=-9ZheXYOMeM&feature=youtu.be&t=1h23m24s
@@ -501,28 +508,29 @@ Consultez ces liens pour trouver la solution :
 Pour vous aider, le responsive du footer sera codé de la façon suivante :
 
 ```html
+<!-- Code à copier-coller intelligemment AU BON ENDROIT dans le fichier index.html ;) -->
 <div class="footer">
   <div class="container">
     <div class="row">
       <div class="col-xs-6 col-sm-3">
         <ul class="list-inline social">
           <li>
-            <a href="https://twitter.com/iceme">
+            <a href="https://twitter.com/muffinme">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a href="https://facebook.com/iceme">
+            <a href="https://facebook.com/muffinme">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a href="https://instagram.com/iceme">
+            <a href="https://instagram.com/muffinme">
               <i class="fa fa-instagram"></i>
             </a>
           </li>
           <li>
-            <a href="https://youtube.com/iceme">
+            <a href="https://youtube.com/muffinme">
               <i class="fa fa-youtube"></i>
             </a>
           </li>
@@ -550,7 +558,7 @@ Pour résumer, ensemble nous avons fait beaucoup de choses :
   - en important des polices et icônes sympathiques
   - en utilisant un framework CSS pour styliser plus vite en utilisant des classes préfabriquées !
 - lié deux pages Web statiques d'un site Web
-- rajouté un formulaire en utilisant et en adaptant des composants préfabriqués CSS
+- rajouté un formulaire en utilisant et en **adaptant des composants préfabriqués CSS**
 - et peut-être rendu une page Web responsive (c'est dur ça ^^...)
 
 # Pour aller plus loin
@@ -561,4 +569,4 @@ Voici des liens utiles et très intéressants !
 - Liste des propriétés CSS : http://cssreference.io/ (very good one !)
 - Liste 2 des propriétés CSS : https://developer.mozilla.org/fr/docs/Web/CSS/Reference
 - Tutoriel 1 HTML/CSS OpenClassrooms : https://openclassrooms.com/courses/prenez-en-main-bootstrap (very complete one but long)
-- Tutoriel 2 HTML/CSS Le Wagon : http://bit.ly/2dS5cC8 (**excellent** one and really efficient but you need to pay ... :S )
+- Tutoriel 2 HTML/CSS Le Wagon : http://bit.ly/2dS5cC8 (**EXCELLENT** one and really efficient but you need to pay sadly... :S )
